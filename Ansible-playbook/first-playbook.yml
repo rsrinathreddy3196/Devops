@@ -9,9 +9,9 @@
     - name: Install nginx
       apt:
         name: nginx
-        status: present
-    -name: Start nginx
+        state: present
+    - name: Start nginx
       service:
         name: nginx
-        status: started
+        state: started
 

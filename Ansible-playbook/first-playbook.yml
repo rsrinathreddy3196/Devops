@@ -1,0 +1,17 @@
+---
+
+- name: Install and start nginx in ec2 instance
+  hosts: all
+  become: true
+  become_user: root
+
+  tasks:
+    - name: Install nginx
+      apt:
+        name: nginx
+        status: present
+    -name: Start nginx
+      service:
+        name: nginx
+        status: started
+
